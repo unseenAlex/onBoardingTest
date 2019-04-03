@@ -1,5 +1,6 @@
 # onBoardingTest
 Test repo for the Unseen Media onboarding experience
+<<<<<<< HEAD
 
 # Loading 3D Models
 A-frame scenes can load 3D models via the <a-assets> tag which should be placed at the top of every A-frame scene. the <a-assets> tag contains <a-asset-item> tags which specify an id for the asset and a source as follows:
@@ -22,3 +23,6 @@ A given asset can be called via the id it was given through an <a-entity> tag th
     <a-sky color="#ECECEC"></a-sky>
 </a-scene>
 ```
+=======
+> hi <3 Casey
+>>>>>>> 1454c9a2926b53caec361a6be24ca987a0184b89
