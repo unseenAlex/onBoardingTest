@@ -1,16 +1,89 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>onBoardingTest Root</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Unseen Media Demos</title>
 </head>
+
 <body>
-    <p>Choose from one of the demo's below</p>
-    <ul>
-        <li><a href="https://unseenalex.github.io/onBoardingTest/demos/aFrame.html">Check out the aFrame demo.</a></li>
-        <li><a href="https://unseenalex.github.io/onBoardingTest/demos/8thWall.html">Check out the 8thWall demo. Won't work without device authorization</a></li>
-    </ul>
+    <!--Header contains navbar-->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">Unseen Media</a>
+            <!--TODO: insert company logo here-->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link active" href="https://unseenalex.github.io/onBoardingTest/">Home <span
+                            class="sr-only">(current)</span></a>
+                    <a class="nav-item nav-link" href="https://www.unseenmedia.io/">About</a>
+                    <a class="nav-item nav-link" href="https://www.unseenmedia.io/contact">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!--Main contains demo cards-->
+    <main class="container">
+        <div class="row">
+            <div class="col display-1 text-center">Welcome!</div>
+        </div>
+        <div class="row">
+            <p class="col blockquote text-center">Below you'll find our webAR demos that are currently in development.
+                We're testing out some cool stuff using A-frame and 8thWall. Check out the GitHub repo or our official
+                site down below.</p>
+        </div>
+        <div class="row justify-content-around">
+            <a href="https://github.com/unseenAlex/onBoardingTest" class="col-sm-2 btn btn-primary">GitHub Repo</a>
+            <a href="https://www.unseenmedia.io/" class="col-sm-2 btn btn-secondary">Unseen Media</a>
+        </div>
+        <hr>
+        <div class="row justify-content-around">
+            <div class="col-sm-4 card">
+                <img class="card-img-top" src="demos/Images/AframeDemo.png" alt="Card image cap" style="margin-top: 0.5em;">
+                <div class="card-body">
+                    <h5 class="card-title">A-frame starter demo</h5>
+                    <p class="card-text">A starter A-frame example meant to test device capabilities.</p>
+                    <p class="card-text">Features movement but no interaction.</p>
+                    <a href="https://unseenalex.github.io/onBoardingTest/demos/aFrame.html" class="btn btn-primary">Launch</a>
+                </div>
+            </div>
+            <div class="col-sm-4 card">
+                <img class="card-img-top" src="demos/Images/8thWallDemo.jpg" alt="Card image cap" style="margin-top: 0.5em;">
+                <div class="card-body">
+                    <h5 class="card-title">8th Wall Demo</h5>
+                    <p class="card-text">A starter example that uses 8th Wall SLAM technology.</p>
+                    <p class="card-text">Tap place the Unseen logo onto a surface.</p>
+                    <p class="card-text font-weight-bold">Requires device authorization</p>
+                    <a href="https://unseenalex.github.io/onBoardingTest/demos/8thWall.html" class="btn btn-primary">Launch</a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!--Footer-->
+    <footer></footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
 </body>
+
 </html>
