@@ -1,0 +1,230 @@
+{
+    "asset": {
+        "copyright": "(C)2019 ",
+        "generator": "maya2glTF V0.9.11 cmake 5c271ea",
+        "version": "2.0"
+    },
+    "scenes": [
+        {
+            "nodes": [
+                0
+            ]
+        }
+    ],
+    "scene": 0,
+    "nodes": [
+        {
+            "children": [
+                1
+            ],
+            "translation": [
+                0.0,
+                0.0,
+                0.25
+            ],
+            "name": "unseen"
+        },
+        {
+            "mesh": 0,
+            "translation": [
+                -0.0,
+                -0.0,
+                -0.25
+            ],
+            "name": "unseen:PIV"
+        }
+    ],
+    "meshes": [
+        {
+            "primitives": [
+                {
+                    "attributes": {
+                        "COLOR_0": 1,
+                        "NORMAL": 2,
+                        "POSITION": 3,
+                        "TANGENT": 4,
+                        "TEXCOORD_0": 5
+                    },
+                    "indices": 0,
+                    "mode": 4,
+                    "material": 0
+                }
+            ],
+            "name": "unseenShape"
+        }
+    ],
+    "accessors": [
+        {
+            "bufferView": 0,
+            "byteOffset": 0,
+            "componentType": 5123,
+            "count": 12534,
+            "max": [
+                3171
+            ],
+            "min": [
+                0
+            ],
+            "type": "SCALAR"
+        },
+        {
+            "bufferView": 1,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 3172,
+            "max": [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+            ],
+            "min": [
+                0.999999225139618,
+                0.999999225139618,
+                0.999999225139618,
+                0.999999225139618
+            ],
+            "type": "VEC4"
+        },
+        {
+            "bufferView": 2,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 3172,
+            "max": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "min": [
+                -1.0,
+                -1.0,
+                -1.0
+            ],
+            "type": "VEC3"
+        },
+        {
+            "bufferView": 2,
+            "byteOffset": 38064,
+            "componentType": 5126,
+            "count": 3172,
+            "max": [
+                2.117029905319214,
+                0.3801538646221161,
+                0.5
+            ],
+            "min": [
+                -2.117029905319214,
+                -0.3801538646221161,
+                0.0
+            ],
+            "type": "VEC3"
+        },
+        {
+            "bufferView": 1,
+            "byteOffset": 50752,
+            "componentType": 5126,
+            "count": 3172,
+            "max": [
+                1.0,
+                0.9966201186180116,
+                1.0,
+                1.0
+            ],
+            "min": [
+                -0.9919760227203368,
+                -1.0,
+                -1.0,
+                -1.0
+            ],
+            "type": "VEC4"
+        },
+        {
+            "bufferView": 3,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 3172,
+            "max": [
+                1.0,
+                1.0
+            ],
+            "min": [
+                0.0,
+                0.0
+            ],
+            "type": "VEC2"
+        }
+    ],
+    "materials": [
+        {
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    0.800000011920929,
+                    0.800000011920929,
+                    0.800000011920929,
+                    1.0
+                ],
+                "baseColorTexture": {
+                    "index": 0
+                },
+                "metallicFactor": 0.0,
+                "roughnessFactor": 1.0
+            },
+            "name": "rainbow"
+        }
+    ],
+    "textures": [
+        {
+            "sampler": 0,
+            "source": 0
+        }
+    ],
+    "images": [
+        {
+            "uri": "unseenLogoRainbow.png"
+        }
+    ],
+    "samplers": [
+        {
+            "magFilter": 9729,
+            "minFilter": 9987,
+            "wrapS": 10497,
+            "wrapT": 10497
+        }
+    ],
+    "bufferViews": [
+        {
+            "buffer": 0,
+            "byteOffset": 203008,
+            "byteLength": 25068,
+            "target": 34963
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 0,
+            "byteLength": 101504,
+            "byteStride": 16,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 101504,
+            "byteLength": 76128,
+            "byteStride": 12,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 177632,
+            "byteLength": 25376,
+            "byteStride": 8,
+            "target": 34962
+        }
+    ],
+    "buffers": [
+        {
+            "byteLength": 228076,
+            "uri": "unseenLogo0.bin"
+        }
+    ]
+}
