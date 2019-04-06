@@ -47,6 +47,9 @@ Source: https://github.com/8thwall/web/tree/master/gettingstarted/xraframe-->
 
     <a-light type="ambient" intensity="1"></a-light>
 
+    <!--Test gestures-->
+    <a-entity gltf-model="#logo" class="cantap" hold-drag two-finger-spin pinch-scale scale="0.025 0.025 0.025"></a-entity>
+
     <!--Tappable ground-->
     <a-entity id="ground" class="cantap" geometry="primitive: box"
       material="color: #ffffff; transparent: true; opacity: 0.0" scale="1000 2 1000" position="0 -1 0">
