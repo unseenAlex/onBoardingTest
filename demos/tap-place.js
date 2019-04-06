@@ -13,7 +13,7 @@ AFRAME.registerComponent('tap-place', {
             const newElement = document.createElement('a-entity');
 
             //use the raycaster to get the location of the touch in the scene
-            const touchpoint = event.detail.intersection.point;
+            const touchPoint = event.detail.intersection.point;
             newElement.setAttribute('position', touchPoint);
 
             //choose a random y rotation for the new object
