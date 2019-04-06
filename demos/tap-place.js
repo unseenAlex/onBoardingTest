@@ -9,8 +9,10 @@ AFRAME.registerComponent('tap-place', {
       ground.addEventListener('click', event => {
         // Create new entity for the new object
         const newElement = document.createElement('a-entity')
+        console.log(newElement)
         // The raycaster gives a location of the touch in the scene
         const touchPoint = event.detail.intersection.point
+        console.log(touchPoint) //me
         newElement.setAttribute('position', touchPoint)
         const randomYRotation = Math.random() * 360
         newElement.setAttribute('rotation', '0 ' + randomYRotation + ' 0')
@@ -18,6 +20,7 @@ AFRAME.registerComponent('tap-place', {
         newElement.setAttribute('scale', '0.0001 0.0001 0.0001')
         newElement.setAttribute('gltf-model', '#logo')
         this.el.sceneEl.appendChild(newElement)
+        console.log(newElement)
         newElement.addEventListener('model-loaded', () => {
           // Once the model is loaded, we are ready to show it popping in using an animation
           newElement.setAttribute('visible', 'true')
