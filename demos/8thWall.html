@@ -30,7 +30,7 @@ Source: https://github.com/8thwall/web/tree/master/gettingstarted/xraframe-->
 
 <body>
   <!-- Add the 'xrweb' attribute to your scene to make it an 8th Wall Web A-FRAME scene. -->
-  <a-scene xrweb gesture-detector tap-place xrextras-almost-there xrextras-loading xrextras-runtime-error>
+  <a-scene xrweb tap-place xrextras-almost-there xrextras-loading xrextras-runtime-error>
 
     <!--Load assets-->
     <a-assets>
@@ -46,9 +46,6 @@ Source: https://github.com/8thwall/web/tree/master/gettingstarted/xraframe-->
     </a-entity>
 
     <a-light type="ambient" intensity="1"></a-light>
-
-    <!--Test gestures-->
-    <a-entity gltf-model="#logo" class="cantap" hold-drag two-finger-spin pinch-scale position="0 0 -3" scale="0.025 0.025 0.025"></a-entity>
 
     <!--Tappable ground-->
     <a-entity id="ground" class="cantap" geometry="primitive: box"
