@@ -30,9 +30,9 @@ AFRAME.registerComponent('tap-place', {
             easing: 'easeOutElastic',
             dur: 800,
           })
-          newElement.setAttribute('hold-drag')
-          newElement.setAttribute('pinch-scale')
-          newElement.setAttribute('two-finger-spin')
+          newElement.setAttribute('hold-drag', '')
+          newElement.setAttribute('pinch-scale', '')
+          newElement.setAttribute('two-finger-spin', '')
         })
       })
     }
