@@ -35,6 +35,5 @@ AFRAME.registerComponent('tap-place', {
     })
   },
   tick: function(){
-    console.log('Tick function working properly')
   }
 })
