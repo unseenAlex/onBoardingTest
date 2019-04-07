@@ -36,12 +36,14 @@ AFRAME.registerComponent('tap-place', {
     })
   },
   tick: function () {
-    //get the main logo in the scene
+    //get the main logo and ground in the scene
     var mainLogo = document.getElementById('mainLogo')
+    var theGround = document.getElementById('ground')
     console.log(mainLogo)
 
     //if mainLogo isn't null then remove this component from the scene
     if(typeof(mainLogo) != null){
+      theGround.removeEventListener('click')
       this.sceneEl.removeAttribute('tap-place')
     }
 
