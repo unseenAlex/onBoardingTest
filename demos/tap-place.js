@@ -19,6 +19,10 @@ AFRAME.registerComponent('tap-place', {
         newElement.setAttribute('visible', 'false')
         newElement.setAttribute('scale', '0.0001 0.0001 0.0001')
         newElement.setAttribute('gltf-model', '#logo')
+        newElement.className += "cantap"
+        newElement.setAttribute('hold-drag', '')
+        newElement.setAttribute('pinch-scale', '')
+        newElement.setAttribute('two-finger-spin', '')
         this.el.sceneEl.appendChild(newElement)
         console.log(newElement)
         newElement.addEventListener('model-loaded', () => {
@@ -30,10 +34,6 @@ AFRAME.registerComponent('tap-place', {
             easing: 'easeOutElastic',
             dur: 800,
           })
-          newElement.className += "cantap"
-          newElement.setAttribute('hold-drag', '')
-          newElement.setAttribute('pinch-scale', '')
-          newElement.setAttribute('two-finger-spin', '')
         })
       })
     }
