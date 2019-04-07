@@ -10,7 +10,8 @@ AFRAME.registerComponent('hold-drag', {
   
     },
     init: function() {
-      this.camera = document.getElementById(this.data.cameraId)
+      //this.camera = document.getElementById(this.data.cameraId)
+      this.camera = document.getElementById('mainCamera')
       this.threeCamera = this.camera.getObject3D('camera')
       this.ground = document.getElementById(this.data.groundId)
   
