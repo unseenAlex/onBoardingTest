@@ -36,7 +36,8 @@ AFRAME.registerComponent('tap-place', {
     newElement.setAttribute('gltf-model', '#logo')
     newElement.className += "cantap"
     newElement.id += "mainLogo" //add a mainLogo id so that the component can be removed when the main logo has been set
-    this.el.sceneEl.appendChild(newElement)
+    //this.el.sceneEl.appendChild(newElement) fix this so that we can properly get the scene via document query
+    document.getElementById("mainScene").appendChild(newElement) //possible fix?
     newElement.setAttribute('hold-drag', '')
     newElement.setAttribute('pinch-scale', '')
     newElement.addEventListener('model-loaded', () => {
