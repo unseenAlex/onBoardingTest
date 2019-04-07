@@ -22,7 +22,6 @@ AFRAME.registerComponent('tap-place', {
       this.el.sceneEl.appendChild(newElement)
       newElement.setAttribute('hold-drag', '')
       newElement.setAttribute('pinch-scale', '')
-      newElement.setAttribute('two-finger-spin', '')
       newElement.addEventListener('model-loaded', () => {
         // Once the model is loaded, we are ready to show it popping in using an animation
         newElement.setAttribute('visible', 'true')
