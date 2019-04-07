@@ -6,34 +6,7 @@
 AFRAME.registerComponent('tap-place', {
   init: function () {
     const ground = document.getElementById('ground')
-    ground.addEventListener('click', event => {
-      // Create new entity for the new object
-      const newElement = document.createElement('a-entity')
-      console.log(newElement)
-      // The raycaster gives a location of the touch in the scene
-      const touchPoint = event.detail.intersection.point
-      newElement.setAttribute('position', touchPoint)
-      const randomYRotation = Math.random() * 360
-      newElement.setAttribute('rotation', '0 ' + randomYRotation + ' 0')
-      newElement.setAttribute('visible', 'false')
-      newElement.setAttribute('scale', '0.0001 0.0001 0.0001')
-      newElement.setAttribute('gltf-model', '#logo')
-      newElement.className += "cantap"
-      newElement.id += "mainLogo" //add a mainLogo id so that the component can be removed when the main logo has been set
-      this.el.sceneEl.appendChild(newElement)
-      newElement.setAttribute('hold-drag', '')
-      newElement.setAttribute('pinch-scale', '')
-      newElement.addEventListener('model-loaded', () => {
-        // Once the model is loaded, we are ready to show it popping in using an animation
-        newElement.setAttribute('visible', 'true')
-        newElement.setAttribute('animation', {
-          property: 'scale',
-          to: '1 1 1',
-          easing: 'easeOutElastic',
-          dur: 800,
-        })
-      })
-    })
+    ground.addEventListener('click', this.spawner)
   },
   tick: function () {
     //get the main logo and ground in the scene
@@ -42,10 +15,39 @@ AFRAME.registerComponent('tap-place', {
     console.log(mainLogo)
 
     //if mainLogo isn't null then remove this component from the scene
-    if(typeof(mainLogo) != null){
-      theGround.removeEventListener('click')
+    if (typeof (mainLogo) != null) {
+      theGround.removeEventListener('click', this.spawner)
       this.sceneEl.removeAttribute('tap-place')
     }
 
+  },
+
+  spawner: function (event) {
+    // Create new entity for the new object
+    const newElement = document.createElement('a-entity')
+    console.log(newElement)
+    // The raycaster gives a location of the touch in the scene
+    const touchPoint = event.detail.intersection.point
+    newElement.setAttribute('position', touchPoint)
+    const randomYRotation = Math.random() * 360
+    newElement.setAttribute('rotation', '0 ' + randomYRotation + ' 0')
+    newElement.setAttribute('visible', 'false')
+    newElement.setAttribute('scale', '0.0001 0.0001 0.0001')
+    newElement.setAttribute('gltf-model', '#logo')
+    newElement.className += "cantap"
+    newElement.id += "mainLogo" //add a mainLogo id so that the component can be removed when the main logo has been set
+    this.el.sceneEl.appendChild(newElement)
+    newElement.setAttribute('hold-drag', '')
+    newElement.setAttribute('pinch-scale', '')
+    newElement.addEventListener('model-loaded', () => {
+      // Once the model is loaded, we are ready to show it popping in using an animation
+      newElement.setAttribute('visible', 'true')
+      newElement.setAttribute('animation', {
+        property: 'scale',
+        to: '1 1 1',
+        easing: 'easeOutElastic',
+        dur: 800,
+      })
+    })
   }
 })
