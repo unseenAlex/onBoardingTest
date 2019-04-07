@@ -5,7 +5,7 @@ This site is hosted on github pages at https://unseenalex.github.io/onBoardingTe
 
 Check below for potential useful information.
 
-# Loading 3D Models
+## Loading 3D Models
 A-frame scenes can load 3D models via the \<a-assets\> tag which should be placed at the top of every A-frame scene. the \<a-assets\> tag contains \<a-asset-item\> tags which specify an id for the asset and a source as follows:
 <br>
 ```
