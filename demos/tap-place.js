@@ -19,6 +19,7 @@ AFRAME.registerComponent('tap-place', {
       newElement.setAttribute('scale', '0.0001 0.0001 0.0001')
       newElement.setAttribute('gltf-model', '#logo')
       newElement.className += "cantap"
+      newElement.id = "mainLogo" //add a mainLogo id so that the component can be removed when the main logo has been set
       this.el.sceneEl.appendChild(newElement)
       newElement.setAttribute('hold-drag', '')
       newElement.setAttribute('pinch-scale', '')
@@ -34,6 +35,15 @@ AFRAME.registerComponent('tap-place', {
       })
     })
   },
-  tick: function(){
+  tick: function () {
+    //get the main logo in the scene
+    var mainLogo = document.getElementById('mainLogo')
+    console.log(mainLogo)
+
+    //if mainLogo isn't null then remove this component from the scene
+    if(typeof(mainLogo) != null){
+      console.log(this.sceneEl)
+    }
+
   }
 })
