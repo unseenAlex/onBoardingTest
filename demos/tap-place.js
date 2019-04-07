@@ -17,7 +17,7 @@ AFRAME.registerComponent('tap-place', {
     //if mainLogo isn't null then remove this component from the scene
     if (typeof (mainLogo) != null) {
       theGround.removeEventListener('click', this.spawner)
-      this.sceneEl.removeAttribute('tap-place')
+      //this.sceneEl.removeAttribute('tap-place')
     }
 
   },
