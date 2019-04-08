@@ -12,12 +12,10 @@ AFRAME.registerComponent('tap-place', {
     //get the main logo and ground in the scene
     var mainLogo = document.getElementById('mainLogo')
     var theGround = document.getElementById('ground')
-    console.log(mainLogo) //note this actually returns an object
 
     //if mainLogo isn't null then remove this component from the scene
     if (mainLogo != null) {
       theGround.removeEventListener('click', this.spawner)
-      //this.sceneEl.removeAttribute('tap-place')
     }
 
   },
@@ -25,7 +23,6 @@ AFRAME.registerComponent('tap-place', {
   spawner: function (event) {
     // Create new entity for the new object
     const newElement = document.createElement('a-entity')
-    console.log(newElement)
     // The raycaster gives a location of the touch in the scene
     const touchPoint = event.detail.intersection.point
     newElement.setAttribute('position', touchPoint)
@@ -40,6 +37,10 @@ AFRAME.registerComponent('tap-place', {
     document.getElementById("mainScene").appendChild(newElement) //possible fix?
     newElement.setAttribute('hold-drag', '')
     newElement.setAttribute('pinch-scale', '')
+    newElement.setAttribute('two-finger-spin', '')
+    console.log(newElement.object3D.rotation);
+    console.log(newElement.object3D.position);
+    console.log(newElement.object3D.scale);
     newElement.addEventListener('model-loaded', () => {
       // Once the model is loaded, we are ready to show it popping in using an animation
       newElement.setAttribute('visible', 'true')

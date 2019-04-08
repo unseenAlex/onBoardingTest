@@ -8,7 +8,7 @@ AFRAME.registerComponent('pinch-scale', {
       max: {default: 8}
     },
     init: function() {
-      this.initialScale = this.el.object3D.scale.clone()
+      //this.initialScale = this.el.object3D.scale.clone()
       this.scaleFactor = 1
       this.handleEvent = this.handleEvent.bind(this)
       this.el.sceneEl.addEventListener('twofingermove', this.handleEvent)
@@ -23,5 +23,11 @@ AFRAME.registerComponent('pinch-scale', {
       this.el.object3D.scale.x = this.scaleFactor * this.initialScale.x
       this.el.object3D.scale.y = this.scaleFactor * this.initialScale.y
       this.el.object3D.scale.z = this.scaleFactor * this.initialScale.z
+    },
+    //moved initialscale to a separate kvp for now, find a way for the components to communicate later
+    initialScale: {
+      x: 1,
+      y: 1,
+      z: 1,
     }
   })
