@@ -7,6 +7,7 @@ AFRAME.registerComponent('tap-place', {
   init: function () {
     const ground = document.getElementById('ground')
     ground.addEventListener('click', this.spawner)
+    ground.addEventListener('click', this.createScene)
   },
   tick: function () {
     //get the main logo and ground in the scene
@@ -51,5 +52,13 @@ AFRAME.registerComponent('tap-place', {
         dur: 800,
       })
     })
+  },
+
+  //function that will spawn a complex 3D object based on a passed id
+  //NOTE: the 3D object has to be in the HTML document but not attached to the scene
+  createScene: function (id, event) {
+    //get the html from the scene
+    var obj = document.getElementById(id);
+    console.log(obj);
   }
 })

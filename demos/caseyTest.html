@@ -1,35 +1,36 @@
 <html>
-  <head>
-    <script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
-  </head>
-  <body>
-    <a-scene debug stats>
-      <a-assets>
-        <a-asset-item id="table" src="export/table.gltf"></a-asset-item>
-      </a-assets>
-      <a-assets>
-        <a-asset-item id="body" src="export/body.gltf"></a-asset-item>
-      </a-assets>
-      <a-assets>
-        <a-asset-item id="knife" src="export/knife.gltf"></a-asset-item>
-      </a-assets>
-      <a-assets>
-        <a-asset-item id="chair" src="export/chair.gltf"></a-asset-item>
-      </a-assets>
 
-      <a-entity gltf-model="#table" position="0 0.0 -5" rotation="0 0 0" scale="0.3 0.3 0.3"></a-entity>
+<head>
+  <script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
+</head>
 
-      <a-entity gltf-model="export/body.gltf" position="0.53121 0 -3.36352" rotation="0 57.27400711686735" scale="0.04 0.04 0.04"></a-entity>
+<body>
+  <a-scene debug stats>
+    <a-assets>
+      <a-asset-item id="table" src="export/table.gltf"></a-asset-item>
+      <a-asset-item id="body" src="export/body.gltf"></a-asset-item>
+      <a-asset-item id="knife" src="export/knife.gltf"></a-asset-item>
+      <a-asset-item id="chair" src="export/chair.gltf"></a-asset-item>
+    </a-assets>
 
-      <a-entity gltf-model="export/chair.gltf" position="0.00033 0 -7.05476" rotation="0 -180" scale="0.26 0.26 0.26"></a-entity>
 
-      <a-entity gltf-model="export/chair.gltf" position="-1.90074 0 -5.13568" rotation="0 -86.5389724187644" scale="0.26077 0.26077 0.26077"></a-entity>
+    <!--Combined entities in a hierarchy-->
+    <a-entity id="CrimeScene" position="0 0 -5" rotation="0 0 0" scale="1 1 1">
+      <a-entity gltf-model="#table" position="0 0 0" rotation="0 0 0" scale="0.3 0.3 0.3"></a-entity>
 
-      <a-entity gltf-model="export/knife.gltf" position="0.38821 0.57523 -3.6726" rotation="-14.195029374366145 119.4256039436834 -9.64631743882254" scale="0.05 0.05 0.05" material="metalness: 0.5"></a-entity>
+      <a-entity gltf-model="export/body.gltf" position="0.53121 0 1.63319" rotation="0 57.274" scale="0.04 0.04 0.04"></a-entity>
 
-      <a-plane position="0 0 -4" rotation="-90 0 0" width="10" height="10" color="#7BC8A4"></a-plane>
-      <a-sky color="#ECECEC"></a-sky>
-    </a-scene>
-  </body>
+      <a-entity gltf-model="export/chair.gltf" position="-1.9 0 -0.49" rotation="0 -75 0" scale="0.26 0.26 0.26"></a-entity>
+
+      <a-entity gltf-model="export/chair.gltf" position="0 0 -2.66" rotation="0 -170.66" scale="0.26 0.26 0.26">
+      </a-entity>
+
+      <a-entity gltf-model="export/knife.gltf" position="0.388 0.575 1.349" rotation="-14.19 119.426 -9.646" scale="0.05 0.05 0.05" material="metalness: 0.5"></a-entity>
+    </a-entity>
+
+    <a-plane position="0 0 -4" rotation="-90 0 0" width="10" height="10" color="#7BC8A4"></a-plane>
+    <a-sky color="#ECECEC"></a-sky>
+  </a-scene>
+</body>
+
 </html>
-
