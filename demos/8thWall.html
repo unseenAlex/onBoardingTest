@@ -37,8 +37,13 @@ Source: https://github.com/8thwall/web/tree/master/gettingstarted/xraframe-->
 
     <!--Load assets-->
     <a-assets>
-      <a-asset-item id="logo" src="export/unseenLogo1024.gltf"></a-asset-item>
+      <a-asset-item id="table" src="export/table.gltf"></a-asset-item>
+      <a-asset-item id="body" src="export/body.gltf"></a-asset-item>
+      <a-asset-item id="knife" src="export/knife.gltf"></a-asset-item>
+      <a-asset-item id="chair" src="export/chair.gltf"></a-asset-item>
     </a-assets>
+
+    <!--Camera-->
     <a-camera id="mainCamera" position="0 8 0" raycaster="objects: .cantap" cursor="
                 fuse: false;
                 rayOrigin: mouse;">
@@ -50,23 +55,6 @@ Source: https://github.com/8thwall/web/tree/master/gettingstarted/xraframe-->
     </a-entity>
 
   </a-scene>
-
-  <!--Crime scene HTML to be instantiated later-->
-  <a-entity id="CrimeScene" position="0 0 -5" rotation="0 0 0" scale="1 1 1">
-    <a-entity gltf-model="#table" position="0 0 0" rotation="0 0 0" scale="0.3 0.3 0.3"></a-entity>
-
-    <a-entity gltf-model="export/body.gltf" position="0.53121 0 1.63319" rotation="0 57.274" scale="0.04 0.04 0.04">
-    </a-entity>
-
-    <a-entity gltf-model="export/chair.gltf" position="-1.9 0 -0.49" rotation="0 -75 0" scale="0.26 0.26 0.26">
-    </a-entity>
-
-    <a-entity gltf-model="export/chair.gltf" position="0 0 -2.66" rotation="0 -170.66" scale="0.26 0.26 0.26">
-    </a-entity>
-
-    <a-entity gltf-model="export/knife.gltf" position="0.388 0.575 1.349" rotation="-14.19 119.426 -9.646"
-      scale="0.05 0.05 0.05" material="metalness: 0.5"></a-entity>
-  </a-entity>
 </body>
 
 </html>
