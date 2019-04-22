@@ -4,8 +4,8 @@
 // Component that places trees where the ground is clicked
 AFRAME.registerComponent('tap-place', {
   init: function () {
-    const ground = document.getElementById('ground')
-    ground.addEventListener('click', this.createScene)
+    const ground = document.getElementById('ground');
+    ground.addEventListener('click', this.createScene);
   },
   tick: function () {
     //get the main logo and ground in the scene
