@@ -4,11 +4,11 @@
 
 AFRAME.registerComponent('pinch-scale', {
     schema: {
-      min: {default: 0.3},
+      min: {default: 0.01},
       max: {default: 8}
     },
     init: function() {
-      //this.initialScale = this.el.object3D.scale.clone()
+      this.initialScale = this.el.object3D.scale.clone()
       this.scaleFactor = 1
       this.handleEvent = this.handleEvent.bind(this)
       this.el.sceneEl.addEventListener('twofingermove', this.handleEvent)
