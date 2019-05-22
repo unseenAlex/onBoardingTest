@@ -32,12 +32,13 @@ Source: https://github.com/8thwall/web/tree/master/gettingstarted/xraframe-->
 
 <body>
   <!-- Add the 'xrweb' attribute to your scene to make it an 8th Wall Web A-FRAME scene. -->
-  <a-scene id="mainScene" debug xrweb place-model="modelID: #fullShop; modelScale: 0.01 0.01 0.01; modelRotation: 0 0 0" gesture-detector xrextras-almost-there xrextras-loading
+  <a-scene id="mainScene" debug xrweb place-model="modelID: #ARTable; modelScale: 0.01 0.01 0.01; modelRotation: 0 0 0" gesture-detector xrextras-almost-there xrextras-loading
     xrextras-runtime-error>
 
     <!--Load assets-->
     <a-assets>
-      <a-asset-item id="fullShop" src="./export/fullShop.gltf"></a-asset-item>
+      <!--<a-asset-item id="fullShop" src="./export/fullShop.gltf"></a-asset-item>-->
+      <a-asset-item id="ARTable" src="./export/ARTable.gltf"></a-asset-item>
     </a-assets>
 
     <!--Camera-->
